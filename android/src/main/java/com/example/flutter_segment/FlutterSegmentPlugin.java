@@ -15,7 +15,6 @@ import com.segment.analytics.Traits;
 import com.segment.analytics.Options;
 import com.segment.analytics.Middleware;
 import com.segment.analytics.integrations.BasePayload;
-import com.segment.analytics.android.integrations.branch.BranchIntegration;
 import static com.segment.analytics.Analytics.LogLevel;
 
 import java.util.LinkedHashMap;
@@ -73,9 +72,9 @@ public class FlutterSegmentPlugin implements MethodCallHandler, FlutterPlugin {
         analyticsBuilder.logLevel(LogLevel.DEBUG);
       }
 
-      if (isBranchIoIntegrationEnabled){
-        analyticsBuilder.use(BranchIntegration.FACTORY);
-      }
+//      if (isBranchIoIntegrationEnabled){
+//        analyticsBuilder.use(BranchIntegration.FACTORY);
+//      }
 
       // Here we build a middleware that just appends data to the current context
       // using the [deepMerge] strategy.
